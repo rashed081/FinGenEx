@@ -1,25 +1,20 @@
 <template>
   <!-- Page Heading -->
-  <v-card style="height: 55px !important" elevation="2" class="baseColor ">
+  <v-card style="height: 55px !important" elevation="2" class="baseColor">
     <v-card-actions class="d-flex justify-space-between">
       <v-card-title class="title text-h2 labelColor">Customer</v-card-title>
       <v-row>
         <v-col cols="12" md="12" class="text-right labelColor">
-          <!-- Ok -->
-          <v-btn class="mr-0 btn-bg-green" @click="onSubmit" :disabled="isDisable">OK</v-btn>
-          <!-- View -->
+          <v-btn class="mr-0 btn-bg-green" @click="onSubmit">OK</v-btn>
           <v-btn class="mr-0 btn-bg-purple" @click="onView">View</v-btn>
-          <!-- Refresh -->
           <v-btn class="mr-0 btn-bg-blue" @click="onRefresh">Refresh</v-btn>
-          <!-- Exit -->
           <v-btn class="mr-0 btn-bg-red" @click="onExit">Exit</v-btn>
         </v-col>
       </v-row>
     </v-card-actions>
   </v-card>
-  <v-container >
+  <v-container>
     <v-card elevation="2" class="mx-auto mt-5 py-5" max-width="1000">
-      
       <!-- Customer Profile Header -->
       <v-card style="height: 45px !important" elevation="2" class="mx-auto baseColor" max-width="980">
         <v-card-title class="title text-h4 labelColor">Customer Profile</v-card-title>
@@ -52,9 +47,8 @@
               min-width="auto">
               <template v-slot:activator="{ on, attrs }">
                 <v-text-field label="Date of Birth" prepend-icon="mdi-calendar" v-bind="attrs" v-on="on"
-                  v-model="customerInfoHandler.DATE_OF_BIRTH"></v-text-field>
+                  v-model="customerInfoHandler.DATE_OF_BIRTH" type="date"></v-text-field>
               </template>
-              <v-date-picker @input="birthdateMenu = true"></v-date-picker>
             </v-menu>
           </v-col>
           <v-col sm="3" cols="12">
@@ -71,7 +65,6 @@
         </v-row>
       </v-card-text>
     </v-card>
-
 
     <!-- Introducer and Address Information -->
     <v-card elevation="2" class="mx-auto mt-5 py-5" max-width="1000">
@@ -104,7 +97,7 @@
                 <v-text-field label="Introducer Details" v-model="customerInfoHandler.INTRODUCER_DETAILS"
                   required></v-text-field>
               </v-col>
-              <v-col cols="12" sm="6" v-if="selectedIntroducerType==='Peoples Representative'">
+              <v-col cols="12" sm="6" v-if="selectedIntroducerType === 'Peoples Representative'">
                 <v-text-field label="Introducer Details" v-model="customerInfoHandler.INTRODUCER_DETAILS"
                   required></v-text-field>
               </v-col>
@@ -167,7 +160,13 @@
       </v-tab-item>
     </v-card>
 
-
+    <!-- Address Preview -->
+    <!-- <v-card elevation="2" class="mx-auto mt-5 py-5" max-width="1000">
+      <v-card style="height: 45px !important" elevation="2" class="mx-auto baseColor" max-width="980">
+        <v-card-title class="title text-h4 labelColor">Addresses</v-card-title>
+      </v-card>
+        <v-data-table :headers="addressHeaders" :items="addresses" :search="search"></v-data-table>
+    </v-card> -->
 
   </v-container>
 </template>
@@ -202,39 +201,63 @@ let ListOfAddressTypes = [
 
 const activeTab = ref(0);
 const selectedIntroducerType = ref('');
-
+const addresses = ref([]);
 const headers = [
   { text: 'Customer Name', value: 'CUSTOMER_NAME' },
   { text: 'Customer ID', value: 'CUSTOMER_ID' },
   { text: 'Spouse Name', value: 'SPOUSE_NAME' },
   { text: '', value: 'MODIFY' },
 ];
-const customers = [
-  {
-    CUSTOMER_NAME: 'John Doe',
-    CUSTOMER_ID: '12345',
-    SPOUSE_NAME: 'Jane Doe',
-  },
-  {
-    CUSTOMER_NAME: 'Jane Smith',
-    CUSTOMER_ID: '67890',
-    SPOUSE_NAME: 'John Smith',
-  },
-  //...s
+const addressHeaders = [
+  { text: 'Type', value: 'type' },
+  { text: 'Details', value: 'details' },
+  { text: 'City', value: 'city' },
+  { text: 'Country', value: 'country' },
+  { text: 'Division', value: 'division' },
+  { text: 'District', value: 'district' },
+  { text: 'Thana', value: 'thana' }
 ];
+// async function onAddressAdd() {
+//   const addressType = customerInfoHandler.ADDRESS_TYPE;
+//   const existingAddress = addresses.value.find(addr => addr === addressType);
 
-async function modifyCustomer(item: any) {
-  console.log(`Modify customer: ${item.CUSTOMER_NAME}`);
-  // Add your logic to modify the customer here
-}
+//   if (existingAddress) {
+//     alert(`An address of type "${addressType}" has already been added.`);
+//     return;
+//   }
+
+//   addresses.value.push({
+//     type: customerInfoHandler.ADDRESS_TYPE,
+//     details: customerInfoHandler.ADDRESS_DETAILS,
+//     city: customerInfoHandler.CITY,
+//     zipCode: customerInfoHandler.ZIP_CODE,
+//     country: customerInfoHandler.COUNTRY,
+//     division: customerInfoHandler.DIVISION,
+//     district: customerInfoHandler.DISTRICT,
+//     thana: customerInfoHandler.THANA,
+//     phoneNo: customerInfoHandler.PHONE_NO,
+//     mobileNo: customerInfoHandler.MOBILE_NO,
+//     email: customerInfoHandler.EMAIL,
+//   });
+// }
+
+// async function modifyCustomer(item: any) {
+//   console.log(`Modify customer: ${item.CUSTOMER_NAME}`);
+//   // Add your logic to modify the customer here
+// }
 
 
 
 async function ClearDataFields() {
 
 }
-async function OnSubmit() { }
-async function onExit() { }
+async function onSubmit() {
+  console.log("ok button clicked");
+  console.log(customerInfoHandler);
+ }
+async function onExit() {
+  //console.log("Exit Button Clicked!!");
+ }
 async function onRefresh() { }
 async function onView() {
 }
@@ -242,7 +265,6 @@ async function onView() {
 </script>
 
 <style scoped>
-
 .title {
   color: white;
   margin-top: -8px;

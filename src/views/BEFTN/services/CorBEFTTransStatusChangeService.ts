@@ -22,6 +22,7 @@ const GetNextEffDate = async (eff_Date, branchID) => {
     return resData;
   }
 };
+
 const GetTransSummaryStatusChange = async (pbranchid, transType, effdate, trans_Status, AuthStatus, pac_no, peft_dr_cr, returnFlag) => {
   const BusinessData = {
     pbranchid: pbranchid,
@@ -43,6 +44,7 @@ const GetTransSummaryStatusChange = async (pbranchid, transType, effdate, trans_
     return resData;
   }
 };
+
 const TransOutRegStatusChgList = async (
   pbranch_id,
   peffective_entry_dt,
