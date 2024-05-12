@@ -1,6 +1,6 @@
 <template>
   <!-- Page Heading -->
-  <v-card style="height: 55px !important" elevation="2" class="baseColor">
+  <v-card style="height: 55px !important" elevation="2" class="baseColor ">
     <v-card-actions class="d-flex justify-space-between">
       <v-card-title class="title text-h2 labelColor">Customer</v-card-title>
       <v-row>
@@ -17,9 +17,9 @@
       </v-row>
     </v-card-actions>
   </v-card>
-  <v-container>
+  <v-container >
     <v-card elevation="2" class="mx-auto mt-5 py-5" max-width="1000">
-
+      
       <!-- Customer Profile Header -->
       <v-card style="height: 45px !important" elevation="2" class="mx-auto baseColor" max-width="980">
         <v-card-title class="title text-h4 labelColor">Customer Profile</v-card-title>
@@ -72,25 +72,103 @@
       </v-card-text>
     </v-card>
 
-    <!-- Popup Window -->
-    <v-dialog v-model="dialog" max-width="800">
-      <v-card>
-        <v-toolbar flat color="info" dark>
-          <v-toolbar-title>Customer List</v-toolbar-title>
-        </v-toolbar>
-        <v-card-text>
-          <v-data-table :headers="headers" :items="customers" item-key="CUSTOMER_ID" class="elevation-1">
-            <template v-slot:item.MODIFY="{ item }">
-              <v-btn small color="primary" @click="modifyCustomer(item)">Modify</v-btn>
-            </template>
-          </v-data-table>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="primary" @click="dialog = false">OK</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+
+    <!-- Introducer and Address Information -->
+    <v-card elevation="2" class="mx-auto mt-5 py-5" max-width="1000">
+      <!-- Tab Header -->
+      <v-tabs style="height: 39px !important" elevation="2" class="baseColor px-2" v-model="activeTab">
+        <v-tab class="title text-h4 labelColor">Introducer Info</v-tab>
+        <v-tab class="title text-h4 labelColor">Address List</v-tab>
+      </v-tabs>
+
+      <!-- Introducer -->
+      <v-tab-item v-if="activeTab === 0">
+        <v-card elevation="1" class="mx-auto pt-7 " max-width="960">
+          <!-- Form  -->
+          <v-card-text>
+            <v-card-title class="text-h4">Introducer Information</v-card-title>
+            <v-row cols="12" sm="12">
+              <v-col cols="12" sm="4">
+                <v-autocomplete v-model="customerInfoHandler.INTRODUCER_TYPE" label="Introducer Type"
+                  :items="ListOfIntroducerTypes" item-title="label" item-value="value"></v-autocomplete>
+              </v-col>
+              <v-col cols="12" sm="4">
+                <v-text-field label="Introducer Acc Branch" v-model="customerInfoHandler.INTRODUCER_ACC_BRANCH"
+                  required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="4">
+                <v-text-field label="Introducer Acc no" v-model="customerInfoHandler.INTRODUCER_ACC_NO"
+                  required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <v-text-field label="Introducer Details" v-model="customerInfoHandler.INTRODUCER_DETAILS"
+                  required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6" v-if="selectedIntroducerType==='Peoples Representative'">
+                <v-text-field label="Introducer Details" v-model="customerInfoHandler.INTRODUCER_DETAILS"
+                  required></v-text-field>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+
+      <!-- Address List -->
+      <v-tab-item v-if="activeTab === 1">
+        <v-card elevation="1" class="mx-auto pt-7 " max-width="960">
+          <!-- Form  -->
+          <v-card-text>
+            <v-card-title class="text-h4">Address List</v-card-title>
+            <v-row cols="12" sm="12">
+              <v-col cols="12" sm="4">
+                <v-autocomplete v-model="customerInfoHandler.ADDRESS_TYPE" label="Address Type"
+                  :items="ListOfAddressTypes" item-title="label" item-value="value"></v-autocomplete>
+              </v-col>
+              <v-col cols="12" sm="4">
+                <v-text-field label="Address" v-model="customerInfoHandler.ADDRESS_DETAILS" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="4">
+                <v-text-field label="City/Town/Area" v-model="customerInfoHandler.CITY" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="3">
+                <v-text-field label="Zip/Postal Code" v-model="customerInfoHandler.ZIP_CODE" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="3">
+                <v-autocomplete v-model="customerInfoHandler.COUNTRY" label="Country" :items="ListOfAddressTypes"
+                  item-title="label" item-value="value"></v-autocomplete>
+              </v-col>
+              <v-col cols="12" sm="3">
+                <v-autocomplete v-model="customerInfoHandler.DIVISION" label="Division / State"
+                  :items="ListOfAddressTypes" item-title="label" item-value="value"></v-autocomplete>
+              </v-col>
+              <v-col cols="12" sm="3">
+                <v-autocomplete v-model="customerInfoHandler.DISTRICT" label="District" :items="ListOfAddressTypes"
+                  item-title="label" item-value="value"></v-autocomplete>
+              </v-col>
+              <v-col cols="12" sm="3">
+                <v-autocomplete v-model="customerInfoHandler.THANA" label="Thana" :items="ListOfAddressTypes"
+                  item-title="label" item-value="value"></v-autocomplete>
+              </v-col>
+              <v-col cols="12" sm="3">
+                <v-text-field label="Phone No" v-model="customerInfoHandler.PHONE_NO" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="3">
+                <v-text-field label="Mobile No" v-model="customerInfoHandler.MOBILE_NO" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="3">
+                <v-text-field label="Email" v-model="customerInfoHandler.EMAIL" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="12">
+                <v-btn class="btn-bg-primary mt-3" @click="onAddressAdd">Add</v-btn>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+    </v-card>
+
+
+
   </v-container>
 </template>
 
@@ -99,10 +177,6 @@ import { ref, onMounted, reactive } from 'vue';
 import type CustomerInfoInterface from '../models/CustomerInfoInterface';
 
 const customerInfoHandler = ref<CustomerInfoInterface>({}).value;
-
-onMounted(() => {
-  customerInfoHandler.CUSTOMER_ID = '[AUTO]';
-});
 
 
 let ListOfMaritalStatusType = [
@@ -116,8 +190,19 @@ let ListOfGenderType = [
   { label: 'Female', value: 'Female' },
   { label: 'Others', value: 'Others' }
 ];
+let ListOfIntroducerTypes = [
+  'Bank Employee with PA No',
+  'Account Holder',
+  'Peoples Representative',
+];
+let ListOfAddressTypes = [
+  { label: 'Present Address', value: 'Present Address' },
+  { label: 'Permanent Address', value: 'Permanent Address' }
+];
 
-const dialog = ref(false);
+const activeTab = ref(0);
+const selectedIntroducerType = ref('');
+
 const headers = [
   { text: 'Customer Name', value: 'CUSTOMER_NAME' },
   { text: 'Customer ID', value: 'CUSTOMER_ID' },
@@ -152,12 +237,12 @@ async function OnSubmit() { }
 async function onExit() { }
 async function onRefresh() { }
 async function onView() {
-  dialog.value = true;
 }
 
 </script>
 
 <style scoped>
+
 .title {
   color: white;
   margin-top: -8px;
