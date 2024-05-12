@@ -1,0 +1,225 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.API\\CorLoan.API.csproj": {}
+  },
+  "projects": {
+    "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.API\\CorLoan.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.API\\CorLoan.API.csproj",
+        "projectName": "CorLoan.API",
+        "projectPath": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.API\\CorLoan.API.csproj",
+        "packagesPath": "C:\\Users\\roni\\.nuget\\packages\\",
+        "outputPath": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\roni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Leads Bank Ultimus Project\\Local Nuget Package\\Local Nuget Package": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.BLL\\CorLoan.BLL.csproj": {
+                "projectPath": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.BLL\\CorLoan.BLL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Leadsoft.Authorization": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Leadsoft.TokenHandler": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.28, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.BLL\\CorLoan.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.BLL\\CorLoan.BLL.csproj",
+        "projectName": "CorLoan.BLL",
+        "projectPath": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.BLL\\CorLoan.BLL.csproj",
+        "packagesPath": "C:\\Users\\roni\\.nuget\\packages\\",
+        "outputPath": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoan.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\roni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Leads Bank Ultimus Project\\Local Nuget Package\\Local Nuget Package": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoanDAL\\CorLoan.DAL.csproj": {
+                "projectPath": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoanDAL\\CorLoan.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoanDAL\\CorLoan.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoanDAL\\CorLoan.DAL.csproj",
+        "projectName": "CorLoan.DAL",
+        "projectPath": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoanDAL\\CorLoan.DAL.csproj",
+        "packagesPath": "C:\\Users\\roni\\.nuget\\packages\\",
+        "outputPath": "D:\\Leads Bank Ultimus Project\\Test_Project_UI_Backend\\Test_Project\\Net_6_API_Skeleton\\CorLoanDAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\roni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Leads Bank Ultimus Project\\Local Nuget Package\\Local Nuget Package": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Leadsoft.Authorization": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
