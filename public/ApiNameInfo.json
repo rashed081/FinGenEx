@@ -1,0 +1,29 @@
+{
+  "CoreGLAPIPath": "GL/CoreGeneralLedgerAPI/",
+  "ConfigParameterAPIPath": "ConfigParameter/CoreConfigParameterAPI/",
+  "CoreSecurityAPIPath": "Security/CoreSecurityAPI/",
+  "CoreCustomerAPIPath": "Customer/CoreCustomerAPI/",
+  "CoreAuthorizationAPIPath": "Authorization/CoreAuthorizationAPI/",
+  "CoreDepositAPIPath": "Deposit/CoreDepositAPI/",
+  "CoreTransactionAPIPath": "Transaction/CoreTransactionAPI/",
+  "CoreRemittanceAPIPath": "Remittance/CoreRemittanceAPI/",
+  "CoreInstructionAPIPath": "Instruction/CoreInstructionAPI/",
+  "CorePaymentServicesAPIPath":"PaymentServices/PaymentServicesAPI/",
+  "GatewayURL": {
+    "CoreAPIGatewatyURL": "http://localhost/CoreAPIGateWay/"
+  },
+  "CoreSecurityAPI": {
+    "LOGIN_PATH": "Security/DoLogin",
+    "LOGOUT_PATH": "Security/DoLogout",
+    "ServicePath": "CoreSecurityAPIPath"
+  },
+  "HomeApplication": {
+    "url": "http://localhost:8081/home"
+  },
+  "CurrentApplication": {
+    "url": "http://localhost:8084/home"
+  },
+  "HomeLoginPath": {
+    "url": "http://localhost:8081/login"
+  }
+}

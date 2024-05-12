@@ -1,0 +1,148 @@
+.v-app-bar.v-toolbar {
+  background: rgb(5 75 117) !important;
+}
+
+.v-autocomplete .v-field .v-text-field__prefix,
+.v-autocomplete .v-field .v-text-field__suffix,
+.v-autocomplete .v-field .v-field__input,
+.v-autocomplete .v-field.v-field {
+  cursor: text;
+  z-index: 50;
+  background: white !important;
+}
+
+.v-label {
+  font-size: 0.975rem;
+  color: black !important;
+  z-index: 100;
+  font-weight: 500;
+}
+
+.baseColor {
+  background: rgb(5 75 117) !important;
+  height: 32px !important;
+  margin-top: -25px !important;
+  margin-bottom: 15px !important;
+}
+
+.v-toolbar__content,
+.v-toolbar__extension {
+  height: 60px !important;
+}
+
+.v-navigation-drawer .v-list {
+  overflow: hidden;
+  background: rgb(5 75 117) !important;
+  color: white;
+  font-size: 14px !important;
+}
+
+.v-input__control {
+  height: 46px !important;
+  margin-top: 2px !important;
+}
+
+.v-input__details {
+  display: none !important;
+}
+
+.v-field__input {
+  min-height: 25px !important;
+  margin-top: 0px !important;
+  color: black !important;
+}
+
+.v-label {
+  font-size: 0.775rem !important;
+  opacity: unset !important;
+  margin-top: 5px !important;
+}
+
+.border {
+  border-style: none !important;
+}
+
+.btn-bg-green {
+  background-color: rgb(24, 171, 134);
+}
+
+.btn-bg-dark-red {
+  background-color: rgb(175, 54, 54);
+}
+
+.btn-bg-red {
+  background-color: rgba(235, 80, 80, 0.8);
+}
+
+.btn-bg-purple {
+  background-color: rgb(110, 89, 146);
+}
+
+.btn-bg-blue {
+  background-color: rgb(0, 128, 255);
+}
+
+.v-row {
+  margin-top: -25px !important;
+}
+
+.rounded-md {
+  border-radius: 5px !important;
+}
+
+.labelColor {
+  color: white !important;
+}
+
+.v-card .v-card-title {
+  margin-top: -30px;
+}
+
+.bg-secondary {
+  background: rgb(5 75 117) !important;
+  margin-top: 100px;
+}
+
+.v-field--variant-filled .v-field__overlay {
+  background-color: white !important;
+}
+
+.v-combobox .v-field .v-text-field__prefix,
+.v-combobox .v-field .v-text-field__suffix,
+.v-combobox .v-field .v-field__input,
+.v-combobox .v-field.v-field {
+  cursor: text;
+  background: white;
+  height: 37px;
+  margin-top: 5px;
+}
+
+.v-combobox--single.v-text-field input {
+  top: 16px !important;
+}
+
+.v-combobox .v-field--dirty .v-combobox__selection {
+  margin-top: -8px;
+}
+
+.v-input--density-default .v-field--variant-solo .v-label.v-field-label--floating,
+.v-input--density-default .v-field--variant-filled .v-label.v-field-label--floating {
+  top: 2px;
+}
+
+.v-combobox .v-label {
+  margin-top: -2px !important;
+}
+
+.v-combobox .v-icon {
+  top: -7px !important;
+}
+
+.v-card-text {
+  padding: 24px;
+  margin-bottom: 10px;
+}
+
+/* .tooltipStyle {
+  background-color: #E6EE9C !important;
+} */

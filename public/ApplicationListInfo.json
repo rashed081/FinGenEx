@@ -1,0 +1,92 @@
+[
+    {
+        "ApplicationId": "55",
+        "ApplicationName": "Customer Profile",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "61",
+        "ApplicationName": "Deposits",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "62",
+        "ApplicationName": "Financing",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "64",
+        "ApplicationName": "PaymentServices",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "56",
+        "ApplicationName": "Bankers Cheque",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "76",
+        "ApplicationName": "EFT",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "66",
+        "ApplicationName": "Transaction Services",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "65",
+        "ApplicationName": "Cheque Manager",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "59",
+        "ApplicationName": "Fixed Asset Management",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "77",
+        "ApplicationName": "Delivery Channels",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "67",
+        "ApplicationName": "Documents Managements",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "64",
+        "ApplicationName": "Payment Services",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "75",
+        "ApplicationName": "Authorizations",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "53",
+        "ApplicationName": "General Ledger",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "70",
+        "ApplicationName": "Parameter Configuration",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "63",
+        "ApplicationName": "Trade Finance",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "57",
+        "ApplicationName": "Cash Vault Management",
+        "ApplicationUrl": "http://localhost:8081/home"
+    },
+    {
+        "ApplicationId": "58",
+        "ApplicationName": "Instrument Register",
+        "ApplicationUrl": "http://localhost:8081/home"
+    }
+]

@@ -1,0 +1,30 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "src/types/.d.ts"
+  ],
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "jquery-ui": [
+        "node_modules/@types/jqueryui/index"
+      ]
+    },
+    "allowJs": true,
+    "types": [
+      "node"
+    ],
+  },
+  "references": [
+    {
+      "path": "./tsconfig.vite-config.json"
+    }
+  ]
+}

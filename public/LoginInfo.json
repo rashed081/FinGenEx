@@ -1,0 +1,6 @@
+{
+    "PROXY_URL": "http://localhost:5000/",
+    "LOCAL_IP": "192.168.20.136",
+    "APPLICATION_ID": "64",
+    "MODULE_ID": "25"
+}
