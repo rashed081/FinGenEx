@@ -80,22 +80,23 @@ const TransOutRegStatusChgList = async (
   }
 };
 
-const BeftTransRegOutAuthChange = async (OBJ_COR_BEFT_TRANS_REG_LIST, trans_type, auth_status_id, valuedate, ACCEPT_EXCEPTION) => {
-  const BusinessData = {
-    OBJ_COR_BEFT_TRANS_REG_LIST: OBJ_COR_BEFT_TRANS_REG_LIST,
-    trans_type: trans_type,
-    auth_status_id: auth_status_id,
-    valuedate: valuedate,
-    ACCEPT_EXCEPTION: ACCEPT_EXCEPTION
-  };
-  const resData = await mixin.$postApiCall(
-    currFunctionNm,
-    apiUrl.CorePaymentServicesAPIPath,
-    'BEFTSave/BeftTransRegOutAuthChange',
-    BusinessData
-  );
-  if (resData) {
-    return resData;
+const BeftTransRegOutAuthChange = async (OBJ_COR_BEFT_TRANS_REG_LIST, trans_type, auth_status_id, valuedate, ACCEPT_EXCEPTION) =>
+  {
+    const BusinessData = {
+      OBJ_COR_BEFT_TRANS_REG_LIST: OBJ_COR_BEFT_TRANS_REG_LIST,
+      trans_type: trans_type,
+      auth_status_id: auth_status_id,
+      valuedate: valuedate,
+      ACCEPT_EXCEPTION: ACCEPT_EXCEPTION
+    };
+    const resData = await mixin.$postApiCall(
+      currFunctionNm,
+      apiUrl.CorePaymentServicesAPIPath,
+      'BEFTSave/BeftTransRegOutAuthChange',
+      BusinessData
+    );
+    if (resData) {
+      return resData;
   }
 };
 
@@ -103,7 +104,9 @@ const GetHOBranch = async (BRANCH_Service_Type) => {
   const BusinessData = {
     BRANCH_Service_Type: BRANCH_Service_Type
   };
-  const listOfType: any[] = await mixin.$getApiCall(currFunctionNm, apiUrl.ConfigParameterAPIPath, 'Common/GetHOBranch', BusinessData);
+  const listOfType: any[] = await mixin.$getApiCall(currFunctionNm, 
+    apiUrl.ConfigParameterAPIPath, 'Common/GetHOBranch', 
+    BusinessData);
   if (listOfType) {
     return listOfType;
   }

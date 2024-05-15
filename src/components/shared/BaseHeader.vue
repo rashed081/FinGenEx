@@ -57,7 +57,7 @@ export default defineComponent({
   <!-- -------------------------------------------------------------------- -->
   <!-- Card with Header & Footer -->
   <!-- -------------------------------------------------------------------- -->
-  <v-card variant="outlined" elevation="0" class="baseColor">
+  <v-card variant="outlined" elevation="0" class="baseColor ">
     <v-card-actions>
       <h4 class="title">{{ title }}</h4>
       <slot name="footer" />

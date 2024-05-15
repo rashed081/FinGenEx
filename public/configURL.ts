@@ -12,6 +12,7 @@ const APIServicePath = {
   CoreTransactionAPIPath: "Transaction/CoreTransactionAPI/",
   CoreRemittanceAPIPath: "Remittance/CoreRemittanceAPI/",
   CoreInstructionAPIPath: "Instruction/CoreInstructionAPI/",
+  CoreLoanAPIPath: "CoreLoan/CorLoanAPI/"
 };
 
 

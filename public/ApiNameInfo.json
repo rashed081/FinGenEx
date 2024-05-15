@@ -9,6 +9,7 @@
   "CoreRemittanceAPIPath": "Remittance/CoreRemittanceAPI/",
   "CoreInstructionAPIPath": "Instruction/CoreInstructionAPI/",
   "CorePaymentServicesAPIPath":"PaymentServices/PaymentServicesAPI/",
+  "CoreLoanAPIPath": "CoreLoan/CorLoanAPI/",
   "GatewayURL": {
     "CoreAPIGatewatyURL": "http://localhost/CoreAPIGateWay/"
   },

@@ -98,7 +98,35 @@ export const dateMixin=()=>{
             return "ok";
         }
     };
+    function $convertToDDMMMYYFormat(date) {
+       
+        if (!date) return null;
  
+        else if (date.length < 10)
+ 
+            return date;
+ 
+        else if (date.includes('T') && date.includes('-')) {
+ 
+            return moment(date, 'YYYY-MM-DDTHH:mm:ss').format('DDMMMYY');
+ 
+        } else if (date.includes('-')) {
+ 
+            return moment(date, 'YYYY-MM-DD').format('DDMMMYY');
+ 
+        }else if (date.includes("/")) {
+ 
+            return moment(date, 'DD/MM/YYYY').format('DDMMMYY');
+ 
+        } else if (date.includes(" ") && date.includes("/")) {
+ 
+            return moment(date, 'MM/DD/YYYY HH:mm:ss').format('DDMMMYY');
+ 
+        }  else
+ 
+            return date;
+ 
+    }
     return{
         dateMixin,
         $dateComparison,
@@ -106,7 +134,8 @@ export const dateMixin=()=>{
         $convertFromCalenderToDDMMYYYY,
         $addAutoSlashToDate,
         $convertToDDMMYYYYFormat,
-        $convertToMMDDYYYYFormat
+        $convertToMMDDYYYYFormat,
+        $convertToDDMMMYYFormat,
         
 
     }
