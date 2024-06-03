@@ -1,1 +1,1 @@
-# FinGenEx from AZmi Siddique
+# FinGenEx from Azmi Siddique
