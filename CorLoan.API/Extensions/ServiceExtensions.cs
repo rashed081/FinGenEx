@@ -1,12 +1,6 @@
-﻿
-using Leadsoft.TokenHandler.TokenGenerators;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using Leadsoft.TokenHandler.TokenGenerators;
 using Enyim.Caching.Configuration;
 using Leadsoft.TokenHandler.CacheManager;
-using System.Collections.Generic;
 using Leadsoft.LoggerService;
 using Leadsoft.Authorization.AuthDBAccess.NFT.Contracts;
 using Leadsoft.Authorization.AuthDBAccess.NFT.Repositories;
@@ -19,10 +13,6 @@ using CorLoan.BLL.ServiceContracts;
 using CorLoan.BLL.Services;
 using CorLoan.DAL.RepositoryContracts;
 using CorLoan.DAL.Repositories;
-using System.Text.Json;
-using Newtonsoft.Json.Linq;
-using System.Runtime.Serialization;
-using System.Xml.Serialization;
 
 namespace CorLoan.Extensions
 {
@@ -77,7 +67,7 @@ namespace CorLoan.Extensions
         public static void ConfigureOracleContext(this IServiceCollection services, IConfiguration configuration)
         {
             string connectionString = configuration.GetConnectionString("DatabaseConUltimus");
-            //connectionString = JsonSerializer.Serialize(connectionString);
+            // connectionString = JsonSerializer.Serialize(connectionString);
             //connectionString = JObject.Parse(connectionString).ToString();
 
             string oracleVersion = configuration.GetValue<string>("Oracleversion");
@@ -110,8 +100,10 @@ namespace CorLoan.Extensions
             services.AddTransient<ICoreAuthorizeSaveLogService, CoreAuthorizeSaveLogService>();
             services.AddTransient<ICoreAuthorizeGenerateLogService, CoreAuthorizeGenerateLogService>();
             services.AddScoped<DBExecutorHelper, DBExecutorHelper>();
-            services.AddScoped<ISampleService, SampleService>();
-            services.AddScoped<ISampleRepository, SampleRepository>();
+            //services.AddScoped<ISampleService, SampleService>();
+            //services.AddScoped<ISampleRepository, SampleRepository>();
+            services.AddScoped<ICustomerInfoSevice, CustomerInfoService>();
+            services.AddScoped<ICustomerInfoRepository, CustomerInfoRepository>();
         }
 
         public static void ConfigureAutoMapper(this IServiceCollection services)
