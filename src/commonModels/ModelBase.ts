@@ -1,8 +1,8 @@
 export default interface ModelBase{
       CloneObj?:String;
-      isAdd?:true;
-      isDelete?:false;
-      isOld?:false;
+      isAdd?:boolean;
+      isDelete?:boolean;
+      isOld?:boolean;
       CreateByLoginId?:String;
       MakeByLoginId?:String;
       AuthByLoginId?:String;

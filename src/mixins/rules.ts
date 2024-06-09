@@ -31,9 +31,16 @@
           return (v: any) => (fieldvalue1.length == len) || fieldName + ' must be ' + len + ' characters'
       }
   }
-  const EmailRules=(fieldName: any)=> {
-      return (v: string) => /.+@.+\..+/.test(v) || fieldName + ' must be valid'
+  // const EmailRules=(fieldName: any)=> {
+  //     return (v: string) => /.+@.+\..+/.test(v) || fieldName + ' must be valid'
       
+  // }
+  const EmailRules = (fieldName: string) => {
+    const regexp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    return [
+      (v: string) => !!v || fieldName + ' is required',
+      (v: string) => regexp.test(v) || fieldName + ' must be valid'
+    ]
   }
 
   const isLetter=(e: { keyCode: number; preventDefault: () => void; })=> {
