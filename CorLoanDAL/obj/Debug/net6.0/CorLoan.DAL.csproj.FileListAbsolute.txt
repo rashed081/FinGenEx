@@ -22,3 +22,15 @@ C:\inetpub\wwwroot\UltimusNex\Development\Net_6_API_Skeleton\CorLoanDAL\obj\Debu
 C:\inetpub\wwwroot\UltimusNex\Development\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\refint\CorLoan.DAL.dll
 C:\inetpub\wwwroot\UltimusNex\Development\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\CorLoan.DAL.pdb
 C:\inetpub\wwwroot\UltimusNex\Development\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\ref\CorLoan.DAL.dll
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\bin\Debug\net6.0\CorLoan.DAL.deps.json
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\bin\Debug\net6.0\CorLoan.DAL.dll
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\bin\Debug\net6.0\CorLoan.DAL.pdb
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\CorLoan.DAL.csproj.AssemblyReference.cache
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\CorLoan.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\CorLoan.DAL.AssemblyInfoInputs.cache
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\CorLoan.DAL.AssemblyInfo.cs
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\CorLoan.DAL.csproj.CoreCompileInputs.cache
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\CorLoan.DAL.dll
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\refint\CorLoan.DAL.dll
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\CorLoan.DAL.pdb
+D:\Leads Bank Ultimus Project\Test_Project_UI_Backend\Test_Project\Net_6_API_Skeleton\CorLoanDAL\obj\Debug\net6.0\ref\CorLoan.DAL.dll

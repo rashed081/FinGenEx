@@ -6,10 +6,9 @@ namespace CorLoan.DAL.Entities
 {
     [Table("CUSTOMER_INFO_RONY")]
     public class Customer : ModelBase<Customer>
-    {       
-
-        [Required]
-        [Key, Column("CUSTOMER_ID")]
+    {
+        [Key]
+        [ Column("CUSTOMER_ID")]
         [Display(Name = "Customer id")]
         public string? CUSTOMER_ID { get; set; }
 
@@ -23,29 +22,36 @@ namespace CorLoan.DAL.Entities
         [Display(Name = "Customer Name")]
         public string? CUSTOMER_NAME { get; set; }
 
-        [Column("CUSTOMER_FATHERS_NAME")]
+        [Column("FATHERS_NAME")]
         [Display(Name = "Customer Fathers Name")]
-        public string? CUSTOMER_FATHERS_NAME { get; set; }
+        public string? FATHERS_NAME { get; set; }
 
-        [Column("CUSTOMER_MOTHERS_NAME")]
-        [Display(Name = "Customer Mothers Name")]
-        public string? CUSTOMER_MOTHERS_NAME { get; set; }
+        [Column("MOTHERS_NAME")]
+        [Display(Name = "Mothers Name")]
+        public string? MOTHERS_NAME { get; set; }
 
-        [Column("CUSTOMER_SPOUSE_NAME")]
-        [Display(Name = "Customer Spouse Name")]
-        public string? CUSTOMER_Spouse_NAME { get; set; }
+        [Column("SPOUSE_NAME")]
+        [Display(Name = "Spouse Name")]
+        public string? SPOUSE_NAME { get; set; }
 
-        [Column("Gender")]
+        [Column("GENDER")]
         [Display(Name = "Gender")]
-        public string? Gender { get; set; }
+        public string? GENDER { get; set; }
 
-        [Column("Date_of_birth")]
+        [Column("DATE_OF_BIRTH")]
         [Display(Name = "Date_of_birth")]
-        public string? Date_of_birth { get; set; }
+        public string? DATE_OF_BIRTH { get; set; }
 
-        [Column("Marital_st")]
+        [Column("MARITAL_ST")]
         [Display(Name = "Marital_status")]
-        public string? Marital_Status { get; set; }
+        public string? MARITAL_ST { get; set; }
 
+        //public Introducer? INTRODUCER { get; set; }
+
+        [NotMapped]
+        public Introducer? INTRODUCER { get; set; }
+
+        [NotMapped]
+        public Address[] ADDRESSES { get; set; }
     }
 }

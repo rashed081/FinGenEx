@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using CorLoan.BLL.DTOs;
 using CorLoan.DAL.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CorLoan.BLL.MappingProfile
 {
@@ -11,7 +8,9 @@ namespace CorLoan.BLL.MappingProfile
     {
         public AutoMapperProfile()
         {
-            CreateMap<Sample, Sample_DTO>().ReverseMap();
+            CreateMap<Customer, CustomerInfo_DTO>().ReverseMap();
+            CreateMap<Introducer, IntroducerInfo_DTO>().ReverseMap();
+            CreateMap<Address, Address_DTO>().ReverseMap();
         }
     }
 }
